@@ -20,10 +20,12 @@ brew install --cask utm   # 或官网 utmapp.com 下载安装
 
 ### 2. 下载 iStoreOS 镜像
 
-官网 istoreos.com → 下载中心：
+固件镜像站：[fw.koolcenter.com/iStoreOS](https://fw.koolcenter.com/iStoreOS/)（iStoreOS 官方固件分发地址，官网 istoreos.com 同）：
 
 - Apple Silicon Mac：`aarch64` EFI 版镜像
 - Intel Mac：`x86_64` EFI 版镜像
+
+选好版本目录（如 24.10），注意和下面 OpenClash 插件的版本对应。
 
 ### 3. 创建虚拟机
 
@@ -42,10 +44,11 @@ Mac 终端确认：`ping 192.168.64.2` 通即可。LuCI 管理地址：http://19
 
 ### 5. 安装 OpenClash
 
-二选一：
+任选其一：
 
-- **iStore 应用商店（推荐）**：LuCI 侧边栏 `iStore` → 找到 OpenClash → 安装
-- **手动**：[OpenClash Releases](https://github.com/vernesong/OpenClash/releases) 下载 ipk → LuCI → 系统 → 软件包 → 上传安装
+- **手动装 ipk（本机实际用的）**：[Are-u-ok Releases](https://github.com/bcseputetto/Are-u-ok/releases) 下载与 iStoreOS 版本对应的包（24.10 用 `iStoreOS_24.10` tag，内含 OpenClash）→ LuCI → 系统 → 软件包 → 上传安装
+- **iStore 应用商店**：LuCI 侧边栏 `iStore` → 找到 OpenClash → 安装
+- **官方源**：[OpenClash Releases](https://github.com/vernesong/OpenClash/releases)
 
 ### 6. OpenClash 关键设置
 
