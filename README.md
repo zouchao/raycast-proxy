@@ -1,6 +1,6 @@
 # raycast-proxy
 
-一键切换代理的 Raycast 脚本工具集。代理端点是 iStoreOS 虚拟机里的 OpenClash（在禁止安装 ClashX 类软件的 Mac 上的替代方案），纯 bash、零依赖。
+一键切换代理的 Raycast 脚本工具集。代理端点是 iStoreOS 虚拟机里的 OpenClash（Mac 本机不装任何代理客户端的轻量方案），纯 bash、零依赖。
 
 ```
 Mac（本机）
@@ -112,7 +112,7 @@ curl -x http://192.168.64.2:7890 https://www.google.com -o /dev/null -w '%{http_
 ## 已知限制
 
 1. **GlobalProtect VPN 连接时**：GP 的隐藏服务 `gpd.pan` 抢占主服务位置，GUI 应用读不到我们设的系统代理（官方 API 改不到该隐藏服务，底层动态 store 归 configd 管）。终端 env 不受影响；Chrome 用 `chromep`。
-2. **VPN 断开时**：公司 LAN 防火墙可能拦代理节点协议 → 外网打不开（国内直连正常）；VPN 连上时节点反而通（流量封装在隧道里）。最佳姿势 = VPN 常连 + 代理常开。
+2. **VPN 断开时**：某些受管网络的 LAN 防火墙可能拦代理节点协议 → 外网打不开（国内直连正常）；VPN 连上时节点反而通（流量封装在隧道里）。最佳姿势 = VPN 常连 + 代理常开。
 3. env 只影响新终端；已有终端手动 `source ~/.config/proxy-env.sh`。
 
 ## 排错
